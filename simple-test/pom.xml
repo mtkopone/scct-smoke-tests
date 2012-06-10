@@ -74,7 +74,7 @@
         <dependency>
           <groupId>reaktor</groupId>
           <artifactId>scct_2.9.1</artifactId>
-          <version>0.1-SNAPSHOT</version>
+          <version>0.2-SNAPSHOT</version>
         </dependency>
       </dependencies>
       <build>
@@ -107,7 +107,7 @@
                     <compilerPlugin>
                       <groupId>reaktor</groupId>
                       <artifactId>scct_2.9.1</artifactId>
-                      <version>0.1-SNAPSHOT</version>
+                      <version>0.2-SNAPSHOT</version>
                     </compilerPlugin>
                   </compilerPlugins>
                 </configuration>
