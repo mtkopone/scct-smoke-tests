@@ -8,7 +8,7 @@
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
     <encoding>UTF-8</encoding>
-    <scala.version>2.9.1</scala.version>
+    <scala.version>2.9.2</scala.version>
   </properties>
   <dependencies>
     <!-- compile -->
@@ -63,17 +63,18 @@
       <repositories>
         <repository>
           <id>scct-repo</id>
-          <!-- locally built version
+          <!-- locally built version -->
           <url>file://${basedir}/../../gh-pages/maven-repo</url>
-          -->
-          <!-- deployed version -->
+          <!-- */ -->
+          <!-- deployed version
           <url>http://mtkopone.github.com/scct/maven-repo</url>
+          <!-- */ -->
         </repository>
       </repositories>
       <dependencies>
         <dependency>
           <groupId>reaktor</groupId>
-          <artifactId>scct_2.9.1</artifactId>
+          <artifactId>scct_${scala.version}</artifactId>
           <version>0.2-SNAPSHOT</version>
         </dependency>
       </dependencies>
@@ -99,14 +100,14 @@
               <execution>
                 <id>main-scalac</id>
                 <configuration>
-                  <jvmArgs>
-                    <jvmArg>-Dscct.basedir=${project.basedir}</jvmArg>
-                    <jvmArg>-Dscct.project.name=${project.name}</jvmArg>
-                  </jvmArgs>
+                  <args>
+                    <args>-P:scct:projectId:${project.name}</args>
+                    <args>-P:scct:basedir:${project.basedir}</args>
+                  </args>
                   <compilerPlugins>
                     <compilerPlugin>
                       <groupId>reaktor</groupId>
-                      <artifactId>scct_2.9.1</artifactId>
+                      <artifactId>scct_2.9.2</artifactId>
                       <version>0.2-SNAPSHOT</version>
                     </compilerPlugin>
                   </compilerPlugins>
