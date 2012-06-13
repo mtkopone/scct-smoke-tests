@@ -6,6 +6,13 @@ object App {
   def bar(x : Array[String]) = {
     x.foldLeft("")((a,b) => a + b)
   }
+
+  def thisGetsCalledFromDependentProjectSecond(x : String) = {
+    if (x.length > 1)
+      x.substring(0, 1)
+    else
+      x
+  }
   
   def main(args : Array[String]) {
     println( "Hello World!" )

@@ -1,9 +1,19 @@
 package reaktor.scct
 
+import reaktor.scct.App
+
 object App2 {
   
   def foo(x : Array[String]) = x.foldLeft("")((a,b) => a + b)
+
+  def thisOneCallsProjectFirstDependency(x: String) = {
+    App.thisGetsCalledFromDependentProjectSecond(x)
+  }
   
+  def heresAMethodThatGetsCalledByADependentProjectDuringItsTests(x : Array[String]) = {
+    x.foldLeft("")((a,b) => a + "/" + b)
+  }
+
   def main(args : Array[String]) = {
     println( "Hello World!" )
     println("concat arguments = " + foo(args))
