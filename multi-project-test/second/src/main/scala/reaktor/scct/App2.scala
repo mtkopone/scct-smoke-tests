@@ -1,7 +1,5 @@
 package reaktor.scct
 
-import reaktor.scct.App
-
 object App2 {
   
   def foo(x : Array[String]) = x.foldLeft("")((a,b) => a + b)

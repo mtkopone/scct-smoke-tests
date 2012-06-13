@@ -11,6 +11,11 @@
   <version>1.0-SNAPSHOT</version>
   <name>second</name>
   <dependencies>
+    <dependency>
+      <groupId>reaktor.scct</groupId>
+      <artifactId>first</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

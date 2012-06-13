@@ -2,7 +2,7 @@ import sbt._
 import Keys._
 
 object MultiProjectTestBuild extends Build {
-    lazy val root = Project(id = "multi-project-test", base = file(".")) aggregate(first, second, third)
+    lazy val root = Project(id = "multi-project-test", base = file(".")) settings (ScctPlugin.mergeReportSettings: _*) aggregate(first, second, third)
 
     lazy val first = Project(id = "first", base = file("first")) settings (ScctPlugin.instrumentSettings: _*)
     lazy val second = Project(id = "second", base = file("second")) settings (ScctPlugin.instrumentSettings: _*) dependsOn(first)
