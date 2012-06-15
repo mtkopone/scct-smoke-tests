@@ -14,6 +14,10 @@ object App {
       x
   }
   
+  def thisCallsExternalDependency = {
+    HelloWorld.untestedMethod
+  }
+
   def main(args : Array[String]) {
     println( "Hello World!" )
     println("concat arguments = " + foo(args))

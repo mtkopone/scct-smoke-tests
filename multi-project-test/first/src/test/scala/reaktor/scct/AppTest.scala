@@ -7,6 +7,9 @@ class AppTest extends SpecificationWithJUnit {
     "concatenate Strings" in {
       App.foo(Array("foo","bar")) mustEqual "foobar"
     }
+    "call external dependency" in {
+      App.thisCallsExternalDependency mustEqual 24
+    }
     "have relevant props" in {
       println("[first] scct.basedir: "+System.getProperty("scct.basedir"))
       println("[first] scct.report.hook: "+System.getProperty("scct.report.hook"))
