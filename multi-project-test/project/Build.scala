@@ -20,6 +20,6 @@ object MultiProjectTestBuild extends Build {
   )
 
   lazy val externalDeps = Seq(
-    libraryDependencies += "reaktor.scct" % "simple-test" % "1.0-SNAPSHOT"
+    libraryDependencies += "reaktor.scct" %% "simple-test" % "1.0"
   )
 }
