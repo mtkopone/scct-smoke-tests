@@ -32,6 +32,12 @@
        <scope>test</scope>
      </dependency>
   </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>scct-plugin-repo</id>
+      <url>http://mtkopone.github.com/scct/maven-repo</url>
+    </pluginRepository>
+  </pluginRepositories>
   <build>
     <sourceDirectory>src/main/scala</sourceDirectory>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
