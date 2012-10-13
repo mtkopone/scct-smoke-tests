@@ -35,7 +35,8 @@
   <pluginRepositories>
     <pluginRepository>
       <id>scct-plugin-repo</id>
-      <url>http://mtkopone.github.com/scct/maven-repo</url>
+      <url>file:///Users/mtkopone/projects/scct-root/gh-pages/maven-repo</url>
+      <!-- <url>http://mtkopone.github.com/scct/maven-repo</url> -->
     </pluginRepository>
   </pluginRepositories>
   <build>
@@ -88,7 +89,7 @@
       <repositories>
         <repository>
           <id>scct-local-repo</id>
-          <url>file:///Users/mtkopone/projects/scct/gh-pages/maven-repo</url>
+          <url>file:///Users/mtkopone/projects/scct-root/gh-pages/maven-repo</url>
         </repository>
       </repositories>
       <dependencies>
