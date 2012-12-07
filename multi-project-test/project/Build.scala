@@ -11,11 +11,11 @@ object MultiProjectTestBuild extends Build {
 
   override lazy val settings = super.settings ++ Seq(
     organization := "reaktor.scct",
-    scalaVersion := "2.9.2",
+    scalaVersion := "2.10.0-RC3",
     resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository",
     libraryDependencies ++= Seq(
       "junit" % "junit" % "4.10" % "test",
-      "org.specs2" %% "specs2" % "1.9" % "test"
+      "org.specs2" %% "specs2" % "1.12.3" % "test"
     )
   )
 
